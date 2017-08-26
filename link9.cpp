@@ -5,6 +5,7 @@ struct Node{
     int data;
     struct Node *next;
 }*list =NULL;
+// INSERTION OF NODE AT BEGINNING
 Node* insert_at_beg(int x)
 {
     Node* p=new Node;
@@ -12,6 +13,7 @@ Node* insert_at_beg(int x)
     p->next=list;
     list=p;
 }
+// INSERTION OF NODE AT end
 Node* insert_at_end(int y){
     Node *p = new Node;
     Node *r = list;
@@ -29,6 +31,8 @@ Node* insert_at_end(int y){
         r->next = p;
     }
 }
+
+// INSERTION OF NODE AT SOME POSITION
 Node* insert_at_pos(int data,int n)
 {
 	Node* p=new Node;
@@ -55,6 +59,7 @@ Node* insert_at_pos(int data,int n)
 	q->next=p;
    }
 }
+// DELETION OF NODE AT BEGINNING
 void del_at_beg()
 {
 	Node* p=new Node;
@@ -69,6 +74,8 @@ void del_at_beg()
 		delete(p);
 	}
 }
+
+// DELETION OF NODE AT END
 void del_at_end()
 {
 	Node* p=new Node;
@@ -80,20 +87,16 @@ void del_at_end()
 	else
 	{    
 	     p=list;
-	     
-		 
-				while(p->next!=NULL)
-	   			{
-		    		 q=p;
-		     
-	        	p=p->next;
-	   			 }
+	     while(p->next!=NULL)
+	   	{
+		    	 q=p;
+		         p=p->next;
+	   	 }
 	      q->next=NULL;
-	     	delete(p);
-		//show();
-	   
+	     	delete(p); 
 	}
 }
+// DELETION OF NODE AT SOME POSITION
 
 void del_at_pos(int x)
 {
@@ -122,7 +125,7 @@ void del_at_pos(int x)
 		    q->next=p->next;
 		    
 	     	delete(p);
-		//show();
+		
        }
 	}
 }
@@ -175,12 +178,13 @@ int main()
             		break;
             case 6:cout<<"\nEnter pos:";
                     cin>>x;
-					del_at_pos(x);
+		del_at_pos(x);
             		break;
             case 7:show();
                     break;
             
             case 8: exit(0);
+		break;
             
             default: cout<<"\nWrong choice!!";
         }
