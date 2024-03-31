@@ -5,7 +5,8 @@ struct Node{
     int data;
     struct Node *next;
 }*list =NULL;
-// INSERTION OF NODE AT BEGINNING
+// INSERTION OF NODE AT BEGINNING 
+//Insert 85
 Node* insert_at_beg(int x)
 {
     Node* p=new Node;
