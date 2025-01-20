@@ -14,7 +14,7 @@ Node* insert_at_beg(int x)
     p->next=list;
     list=p;
 }
-// INSERTION OF NODE AT end
+// INSERTION OF NODE AT end of the list
 Node* insert_at_end(int y){
     Node *p = new Node;
     Node *r = list;
